@@ -1,0 +1,34 @@
+# docker stop $(docker ps -q)
+
+# docker stop $(docker ps -aq)
+# docker rm $(docker ps -aq)
+
+
+docker rmi $(docker images -a -q)
+
+docker exec -it  docker-lamp_db_1 bash
+
+
+
+php artisan migrate
+php artisan make:migration create_trendings_table
+php artisan make:migration create_orders_table
+php artisan make:model Blog
+php artisan make:model Order
+php artisan make:model Trending
+
+php artisan migrate
+
+php artisan make:controller AustraliaPostController
+php artisan make:controller BlogController
+php artisan make:controller InstagramController
+php artisan make:controller PayPalController
+php artisan make:controller PaymentController
+php artisan make:controller PaymentController
+
+sudo chown [username]:docker /var/run/docker.sock
+
+get ip
+hostname -I | cut -d ' ' -f1
+
+bin/magento setup:install --base-url=http://localhost:81/ --db-host=db --db-name=magento2 --db-user=root --db-password=test --admin-firstname=epayco --admin-lastname=admin --admin-email=admin@admin.com --admin-user=admin --admin-password=admin123 --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1

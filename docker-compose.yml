@@ -1,0 +1,64 @@
+version: "3.1"
+services:
+    db:
+        image: mysql
+        ports: 
+            - "3307:3306"
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_DATABASE: dbname
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test 
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - ./conf:/etc/mysql/conf.d
+            - persistent:/var/lib/mysql
+        networks:
+            - test-network
+    test-app:
+        build: .
+        container_name: test-app
+        ports: 
+            - "81:80"
+        volumes:
+            - ./www:/var/www/html
+            #- ./config:/usr/local/etc/php
+            - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+        environment:
+            XDEBUG_CLIENT_HOST: 172.17.0.1
+            XDEBUG_CLIENT_PORT: 9001
+            PHP_IDE_CONFIG: serverName=www-server'
+        links:
+            - db
+        networks:
+            - test-network
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8001:80
+        environment:
+            MYSQL_USER: root
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+        networks:
+            - test-network
+
+    elasticsearch_magento2_m2:
+        image: elasticsearch:7.9.3
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+        environment:
+            - discovery.type=single-node
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+        networks:
+            - test-network
+
+volumes:
+    persistent: {}
+
+networks:
+    test-network:

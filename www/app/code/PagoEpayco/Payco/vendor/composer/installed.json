@@ -1,0 +1,144 @@
+{
+    "packages": [
+        {
+            "name": "epayco/epayco-php",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epayco/epayco-php.git",
+                "reference": "b9c72c4e6586045553bb194cd549e8929fb13c2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epayco/epayco-php/zipball/b9c72c4e6586045553bb194cd549e8929fb13c2c",
+                "reference": "b9c72c4e6586045553bb194cd549e8929fb13c2c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "rmccue/requests": ">=2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.9"
+            },
+            "time": "2022-03-15T20:32:35+00:00",
+            "default-branch": true,
+            "type": "sdk",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Epayco\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Epayco and contributors",
+                    "homepage": "https://github.com/epayco/epayco-php/graphs/contributors"
+                }
+            ],
+            "description": "Epayco API client for PHP",
+            "homepage": "https://github.com/epayco/epayco-php",
+            "keywords": [
+                "api",
+                "epayco"
+            ],
+            "support": {
+                "issues": "https://github.com/epayco/epayco-php/issues",
+                "source": "https://github.com/epayco/epayco-php/tree/v1.6.0"
+            },
+            "install-path": "../epayco/epayco-php"
+        },
+        {
+            "name": "rmccue/requests",
+            "version": "dev-develop",
+            "version_normalized": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WordPress/Requests.git",
+                "reference": "fc36dd62d79a51a992a77594b2bd3e2764441b9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WordPress/Requests/zipball/fc36dd62d79a51a992a77594b2bd3e2764441b9a",
+                "reference": "fc36dd62d79a51a992a77594b2bd3e2764441b9a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6.20"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "php-parallel-lint/php-console-highlighter": "^1.0.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3.2",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "requests/test-server": "dev-main",
+                "roave/security-advisories": "dev-latest",
+                "squizlabs/php_codesniffer": "^3.7.1",
+                "wp-coding-standards/wpcs": "^2.0",
+                "yoast/phpunit-polyfills": "^1.0.0"
+            },
+            "time": "2022-06-20T10:07:01+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "library/Deprecated.php"
+                ],
+                "psr-4": {
+                    "WpOrg\\Requests\\": "src/"
+                },
+                "classmap": [
+                    "library/Requests.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan McCue",
+                    "homepage": "https://rmccue.io/"
+                },
+                {
+                    "name": "Alain Schlesser",
+                    "homepage": "https://github.com/schlessera"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "homepage": "https://github.com/jrfnl"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/WordPress/Requests/graphs/contributors"
+                }
+            ],
+            "description": "A HTTP library written in PHP, for human beings.",
+            "homepage": "https://requests.ryanmccue.info/",
+            "keywords": [
+                "curl",
+                "fsockopen",
+                "http",
+                "idna",
+                "ipv6",
+                "iri",
+                "sockets"
+            ],
+            "support": {
+                "docs": "https://requests.ryanmccue.info/",
+                "issues": "https://github.com/WordPress/Requests/issues",
+                "source": "https://github.com/WordPress/Requests"
+            },
+            "install-path": "../rmccue/requests"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

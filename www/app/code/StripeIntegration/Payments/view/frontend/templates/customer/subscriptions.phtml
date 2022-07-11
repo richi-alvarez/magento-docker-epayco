@@ -1,0 +1,109 @@
+<?php
+
+$subscriptions = $this->getSubscriptions();
+$paymentMethods = $this->getCustomerPaymentMethods();
+
+if (empty($subscriptions)): ?>
+<div class="message info empty">
+  <span><?php echo __("You do not have any subscriptions yet."); ?></span>
+</div>
+<?php else: ?>
+  <div class="table-wrapper stripe-subscriptions">
+    <table class="data table table-order-items history" id="my-orders-table">
+      <caption class="table-caption"><?php echo __("Subscriptions"); ?></caption>
+      <thead>
+        <tr>
+          <th scope="col" class="col order"><?php echo __("Order #"); ?></th>
+          <th scope="col" class="col id"><?php echo __("Subscription"); ?></th>
+          <th scope="col" class="col status"><?php echo __("Renewal"); ?></th>
+        </tr>
+      </thead>
+      <tbody>
+  <?php foreach ($subscriptions as $subscription): ?>
+        <tr>
+          <td data-th="Order #" class="col order">
+            <a href="viewOrder/<?php echo $subscription->metadata["Order #"]; ?>">
+              <?php echo $subscription->metadata["Order #"]; ?>
+            </a>
+          </td>
+          <td data-th="<?php echo __("Subscription"); ?>" class="col id">
+            <div class="subscription-name">
+              <?php echo implode(", ", $this->getInvoiceItems($subscription)); ?>
+            </div>
+            <div class="billed">
+              <?php echo $this->getInvoiceAmount($subscription); ?>
+              <?php echo $this->formatDelivery($subscription); ?>,
+              <?php echo $this->formatLastBilled($subscription); ?>
+            </div>
+            <table class="subscription-details">
+            <tr>
+              <td>
+            <div class="<?php echo $subscription->id; ?> payment-method stripe-subscription-edit">
+              <div class="static section">
+                <div class="details stripe-payments" onclick="stripe.editSubscription('.<?php echo $subscription->id; ?>.payment-method')">
+                  <?php $paymentMethod = $block->getSubscriptionDefaultPaymentMethod($subscription); ?>
+                  <?php if ($paymentMethod): ?>
+                    <img class="icon" src="<?php echo $paymentMethod['icon']; ?>" alt="<?php echo $paymentMethod['brand']; ?>">
+                    <span class="label"><?php echo $paymentMethod['label']; ?></span>
+                    <?php if (!empty($paymentMethod['exp_month'])): ?>
+                      <span class="exp">
+                        <?php echo $paymentMethod['exp_month']; ?>/<?php echo $paymentMethod['exp_year']; ?>
+                      </span>
+                    <?php endif; ?>
+                  <?php else: ?>
+                    <?php echo __("No payment method."); ?>
+                  <?php endif; ?>
+                  <a onclick="javascript:void(0);" class="action edit"><?php echo __("Change"); ?></a>
+                </div>
+              </div>
+              <div class="mutable section">
+                <b><?php echo __("Select a payment method:"); ?></b><br>
+                <form action="changeCard/<?php echo $subscription->id; ?>" method="POST">
+                  <div class="details">
+                    <?php $paymentMethodId = $block->getSubscriptionPaymentMethodId($subscription); ?>
+                    <?php foreach ($paymentMethods as $paymentMethod): ?>
+                      <div class="subscription-card stripe-payments">
+                        <input type="radio" id="<?php echo $subscription->id . "_" . $paymentMethod['id']; ?>"
+                              name="subscription_card"
+                              value="<?php echo $paymentMethod['id']; ?>"
+                              <?php if ($paymentMethodId == $paymentMethod['id']) echo "checked"; ?>>
+
+                        <label for="<?php echo $subscription->id . "_" . $paymentMethod['id']; ?>">
+                          <img class="icon" src="<?php echo $paymentMethod['icon']; ?>" alt="<?php echo $paymentMethod['brand']; ?>">
+                          <span class="label"><?php echo $paymentMethod['label']; ?></span>
+                          <?php if (!empty($paymentMethod['exp_month'])): ?>
+                            <span class="exp">
+                              <?php echo $paymentMethod['exp_month']; ?>/<?php echo $paymentMethod['exp_year']; ?>
+                            </span>
+                          <?php endif; ?>
+                        </label>
+                      </div>
+                    <?php endforeach; ?>
+                  </div>
+                  <div class="actions">
+                    <button type="submit" class="action primary"><?php echo __("Save"); ?></button>
+                    <button type="button" onclick="stripe.cancelEditSubscription('.<?php echo $subscription->id; ?>.payment-method')">
+                      <?php echo __("Cancel"); ?>
+                    </button>
+                    <?php echo __("or"); ?>
+                    <a href="<?php echo $this->getUrl('stripe/customer/paymentmethods'); ?>"><?php echo __("add a new method"); ?></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+              </td>
+            </tr>
+            </table>
+          </td>
+          <td data-th="Actions" class="col actions">
+            <a href="cancel/<?php echo $subscription->id; ?>" class="action delete"
+              onclick="return confirm('<?php echo __("Are you sure you want to cancel this subscription?"); ?>');">
+              <span><?php echo __("Cancel"); ?></span>
+            </a>
+          </td>
+        </tr>
+  <?php endforeach; ?>
+      </tbody>
+    </table>
+  </div>
+<?php endif;
