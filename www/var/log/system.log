@@ -1,0 +1,264 @@
+[2024-06-27T22:55:49.819015+00:00] main.ERROR: Parameter validation failed
+#0 /var/www/html/vendor/symfony/console/Command/Command.php(292): Magento\Setup\Console\Command\InstallCommand->initialize(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#1 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#6 {main} [] []
+[2024-06-27T22:56:37.895457+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2024-06-27T22:56:40.394110+00:00] main.ERROR: Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:04:19.916030+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:04:19.996625+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:06:32.147584+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:07:10.315666+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:07:27.039959+00:00] main.ERROR: There are no commands defined in the "config" namespace.
+
+Did you mean one of these?
+    app:config
+    module:config
+    setup:config
+    setup:store-config
+#0 /var/www/html/vendor/symfony/console/Application.php(720): Symfony\Component\Console\Application->findNamespace('config')
+#1 /var/www/html/vendor/symfony/console/Application.php(266): Symfony\Component\Console\Application->find('config:set')
+#2 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#5 {main} [] []
+[2024-06-27T23:08:43.752893+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:10:24.947628+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:13:06.463473+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:13:06.545235+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:14:01.778382+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:14:01.859143+00:00] main.ERROR: Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:16:42.493279+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:16:42.635707+00:00] main.ERROR: Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:17:48.405920+00:00] main.ERROR: The "---elasticsearch-host" option does not exist.
+#0 /var/www/html/vendor/symfony/console/Input/ArgvInput.php(150): Symfony\Component\Console\Input\ArgvInput->addLongOption('-elasticsearch-...', 'elasticsearch')
+#1 /var/www/html/vendor/symfony/console/Input/ArgvInput.php(85): Symfony\Component\Console\Input\ArgvInput->parseLongOption('---elasticsearc...')
+#2 /var/www/html/vendor/symfony/console/Input/ArgvInput.php(74): Symfony\Component\Console\Input\ArgvInput->parseToken('---elasticsearc...', true)
+#3 /var/www/html/vendor/symfony/console/Input/Input.php(56): Symfony\Component\Console\Input\ArgvInput->parse()
+#4 /var/www/html/vendor/symfony/console/Command/Command.php(285): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#5 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#10 {main} [] []
+[2024-06-27T23:18:59.519941+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:18:59.665635+00:00] main.ERROR: Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:37:09.221805+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:37:09.369838+00:00] main.ERROR: Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
+#0 /var/www/html/setup/src/Magento/Setup/Model/SearchConfig.php(69): Magento\Setup\Model\SearchConfig->validateSearchEngine()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1206): Magento\Setup\Model\SearchConfig->saveConfiguration(Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installSearchConfiguration(Array)
+#3 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#4 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2024-06-27T23:38:40.272150+00:00] main.CRITICAL: Type Error occurred when creating object: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor, Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor::__construct(): Argument #7 ($data) must be of type array, null given, called in /var/www/html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 121 [] []
+[2024-06-27T23:38:47.362966+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.363529+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.363992+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.367165+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.367615+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.545479+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.545780+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.546738+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.546947+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.547707+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.547909+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.548737+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.548938+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.549727+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.549927+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.550711+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.550911+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.551637+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.551839+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.552466+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.552679+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.553466+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.553686+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.554450+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.554670+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.555421+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.555614+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.556300+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.556490+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.557182+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.557367+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.557953+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.558141+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.558715+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.558901+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.559496+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.559689+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.560351+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.560542+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.561281+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.561471+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.591166+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.591392+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.592154+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.592360+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.610220+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.610522+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.692102+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.692349+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.693516+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.694044+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.695694+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.696146+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.697762+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.698205+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.800436+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.800839+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.802247+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.802597+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.803771+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.804140+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.805229+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.805610+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.806742+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.807107+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.808340+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:47.808709+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.305886+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.337376+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.337841+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.349489+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.349674+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.477727+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.478343+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.554301+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.554696+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.587895+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.588199+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.966501+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
+[2024-06-27T23:38:48.966791+00:00] main.ERROR: elasticsearch7 search engine doesn't exist. Falling back to opensearch [] []
